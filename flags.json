@@ -1,0 +1,22 @@
+[
+    {
+        "prefecture": "愛知県",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/0/02/Flag_of_Aichi_Prefecture.svg"
+    },
+    {
+        "prefecture": "秋田県",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/8/84/Flag_of_Akita_Prefecture.svg"
+    },
+    {
+        "prefecture": "Iwate",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_Iwate_Prefecture.svg"
+    },
+    {
+        "prefecture": "Fukushima",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Flag_of_Fukushima_Prefecture.svg"
+    },
+    {
+        "prefecture": "Gunma",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Gunma_Prefecture.svg"
+    }
+]
