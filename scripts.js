@@ -34,7 +34,7 @@ playBtn.addEventListener('click', startQuiz);
 // Function to start the quiz
 function startQuiz() {
     // Hide main menu
-    document.getElementById('quiz-container').style.display = 'block';
+    document.getElementById('quiz-container').style.display = 'flex';
     document.getElementById('main-menu').style.display = 'none';
 
     // Reset variables for a new quiz
@@ -67,22 +67,28 @@ function endQuiz() {
     // Hide quiz container and display main menu
     document.getElementById('quiz-container').style.display = 'none';
     document.getElementById('result-container').style.display = 'block';
+
     // Display results
     const resultContainer = document.getElementById('result-container');
     resultContainer.innerHTML = `
         <h1>Quiz Results</h1>
         <p>Number of correct answers: ${numCorrectAnswers}</p>
         <p>Number of wrong answers: ${numWrongAnswers}</p>
-        <div id="wrong-answers"></div>
+        ${wrongAnswers.length > 0 ? '<div id="wrong-answers"></div>' : ''}
         <button id="play-again-btn">Play Again</button>
     `;
-    displayWrongAnswers();
+
+    // Display wrong answers if there are any
+    if (wrongAnswers.length > 0) {
+        displayWrongAnswers();
+    }
 
     // Attach event listener to the play again button
     const playAgainBtn = document.getElementById('play-again-btn');
+    playAgainBtn.classList.add('styled-button');
     playAgainBtn.addEventListener('click', resetQuiz);
-
 }
+
 
 
 // Function to display wrong answers
@@ -128,6 +134,8 @@ function startQuizWithPrefectures(prefectures) {
     // Initialize quiz variables
     let currentQuestionIndex = 0;
 
+    const optionButtons = [];
+
     // Function to display the current question
     function displayQuestion() {
         const currentQuestion = prefectures[currentQuestionIndex];
@@ -153,7 +161,12 @@ function startQuizWithPrefectures(prefectures) {
         shuffledOptions.forEach(option => {
             const button = document.createElement('button');
             button.textContent = option;
-            button.onclick = () => checkAnswer(option === prefectureName, prefectureName);
+            button.className = 'styled-button';
+            button.onclick = () => {
+                checkAnswer(option === prefectureName, prefectureName);
+                disableAllButtons();
+            };
+            optionButtons.push(button); // Add button to array
             optionsContainer.appendChild(button);
         });
     }
@@ -161,15 +174,16 @@ function startQuizWithPrefectures(prefectures) {
     // Function to handle user selecting an option
     function checkAnswer(isCorrect, prefectureName) {
         const flagUrl = prefectures[currentQuestionIndex].flag;
+        // Display correct or incorrect message as a floating message
+        const message = isCorrect ? 'Correct!' : 'Incorrect!';
+        displayFloatingMessage(message, isCorrect);
 
         if (isCorrect) {
             numCorrectAnswers++;
-            document.getElementById('result').textContent = 'Correct!';
         } else {
             numWrongAnswers++;
             wrongAnswers.push({ prefecture: prefectureName, flag: flagUrl }); // Record wrong answer with prefecture name and flag URL
             console.log(flagUrl)
-            document.getElementById('result').textContent = 'Incorrect!';
         }
 
         // Proceed to next question after a brief delay
@@ -177,15 +191,49 @@ function startQuizWithPrefectures(prefectures) {
             currentQuestionIndex++;
             if (currentQuestionIndex < prefectures.length) {
                 displayQuestion();
-                document.getElementById('result').textContent = '';
             } else {
                 endQuiz();
             }
         }, 1000); // 3 second delay
     }
 
+    // Function to display floating message at mouse position
+    function displayFloatingMessage(message, isCorrect) {
+        // Create a new div element for the floating message
+        const floatingMessage = document.createElement('div');
+        floatingMessage.textContent = message;
+        floatingMessage.style.position = 'absolute';
+        floatingMessage.style.top = `${event.clientY}px`; // Set top position based on mouse Y-coordinate
+        floatingMessage.style.left = `${event.clientX}px`; // Set left position based on mouse X-coordinate
+        floatingMessage.style.backgroundColor = isCorrect ? 'green' : 'red'; // Set background color based on correctness
+        floatingMessage.style.color = 'white';
+        floatingMessage.style.padding = '8px';
+        floatingMessage.style.borderRadius = '4px';
+        floatingMessage.style.transition = 'opacity 0.5s ease-in-out'; // Apply fade transition
+        floatingMessage.style.opacity = 1; // Start with full opacity
+
+        // Append the floating message to the document body
+        document.body.appendChild(floatingMessage);
+
+        // Fade away after 800ms
+        setTimeout(() => {
+            floatingMessage.style.opacity = 0; // Set opacity to 0 for fade-out effect
+            setTimeout(() => {
+                floatingMessage.remove(); // Remove the floating message from the DOM after fading out
+            }, 500); // Wait for the fade-out transition to complete before removing the element
+        }, 800); // Wait 800ms before starting the fade-out
+    }
+
+    // Function to disable all buttons
+    function disableAllButtons() {
+        optionButtons.forEach(button => {
+            button.disabled = true; // Disable button
+        });
+    }
+
     // Display the first question to start the quiz
     displayQuestion();
+
 }
 
 // Function to reset the quiz

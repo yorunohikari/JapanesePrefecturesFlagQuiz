@@ -8,15 +8,107 @@
         "flag": "https://upload.wikimedia.org/wikipedia/commons/8/84/Flag_of_Akita_Prefecture.svg"
     },
     {
-        "prefecture": "Iwate",
-        "flag": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_Iwate_Prefecture.svg"
+        "prefecture": "青森県",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/3/30/Flag_of_Aomori_Prefecture.svg"
     },
     {
-        "prefecture": "Fukushima",
+        "prefecture": "千葉県",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Flag_of_Chiba_Prefecture.svg"
+    },
+    {
+        "prefecture": "愛媛県",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Flag_of_Ehime_Prefecture.svg"
+    },
+    {
+        "prefecture": "福井県",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/5/56/Flag_of_Fukui_Prefecture.svg"
+    },
+    {
+        "prefecture": "福岡県",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/7/71/Flag_of_Fukuoka_Prefecture.svg"
+    },
+    {
+        "prefecture": "福島県",
         "flag": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Flag_of_Fukushima_Prefecture.svg"
     },
     {
-        "prefecture": "Gunma",
+        "prefecture": "岐阜県",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Flag_of_Gifu_Prefecture.svg"
+    },
+    {
+        "prefecture": "群馬県",
         "flag": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Gunma_Prefecture.svg"
+    },
+    {
+        "prefecture": "広島県",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Flag_of_Hiroshima_Prefecture.svg"
+    },
+    {
+        "prefecture": "北海道",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/2/22/Flag_of_Hokkaido_Prefecture.svg"
+    },
+    {
+        "prefecture": "兵庫県",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/7/74/Flag_of_Hyogo_Prefecture.svg"
+    },
+    {
+        "prefecture": "茨城県",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Flag_of_Ibaraki_Prefecture.svg"
+    },
+    {
+        "prefecture": "石川県",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Flag_of_Ishikawa_Prefecture.svg"
+    },
+    {
+        "prefecture": "香川県",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/2/29/Flag_of_Kagawa_Prefecture.svg"
+    },
+    {
+        "prefecture": "鹿児島県",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Flag_of_Kagoshima_Prefecture.svg"
+    },
+    {
+        "prefecture": "神奈川県",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Flag_of_Kanagawa_Prefecture.svg"
+    },
+    {
+        "prefecture": "高知県",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/5/50/Flag_of_Kochi_Prefecture.svg"
+    },
+    {
+        "prefecture": "熊本県",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Kumamoto_Prefecture.svg"
+    },
+    {
+        "prefecture": "京都府",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/0/06/Flag_of_Kyoto_Prefecture.svg"
+    },
+    {
+        "prefecture": "三重県",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Flag_of_Mie_Prefecture.svg"
+    },
+    {
+        "prefecture": "宮城県",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Flag_of_Miyagi_Prefecture.svg"
+    },
+    {
+        "prefecture": "宮崎県",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Flag_of_Miyazaki_Prefecture.svg"
+    },
+    {
+        "prefecture": "長野県",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Flag_of_Nagano_Prefecture.svg"
+    },
+    {
+        "prefecture": "長崎県",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Nagasaki_Prefecture.svg"
+    },
+    {
+        "prefecture": "奈良県",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_Nara_Prefecture.svg"
+    },
+    {
+        "prefecture": "新潟県",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_Niigata_Prefecture.svg"
     }
 ]

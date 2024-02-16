@@ -1,3 +1,4 @@
+/* Global Styles */
 body {
   background-image: url("background.jpg");
   display: flex;
@@ -6,11 +7,14 @@ body {
   height: 100vh; /* Ensure the body fills the viewport height */
 }
 
+/* Common Styles for Multiple Elements */
 #main-menu,
-#quiz-container,
-.modal, #result-container {
+.modal,
+.modal-content,
+#result-container,
+.styled-table,
+#quiz-container {
   text-align: center;
-  /* From https://css.glass */
   background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -20,32 +24,40 @@ body {
   padding: 50px;
 }
 
-#result-container, #quiz-container {
+/* Specific Styles for Individual Elements */
+#result-container,
+#quiz-container {
   display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#flag-container {
+  width: 300px;
+  margin: 0 auto;
 }
 
 #flag-container img {
-  width: 200px; /* Set the desired width */
+  width: 100%; /* Set the image to fill its container */
   height: auto; /* Maintain aspect ratio */
 }
 
-/* Add your CSS styling here */
+/* Modal Styles */
 .modal {
   display: none;
   position: fixed;
   z-index: 1;
-  left: 0;
   top: 0;
   width: 100%;
-  height: 100%;
-  overflow: auto;
+  height: 100vh;
 }
 
 .modal-content {
+  background-color: #ffffff;
   margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
+  width: 80%; /* Adjust modal width for smaller screens */
+  max-width: 600px; /* Limit maximum width */
+  text-align: left;
 }
 
 .close {
@@ -68,23 +80,60 @@ body {
 }
 
 .styled-table {
-  padding: 20px;
   margin: 0 auto; /* Center the table horizontally */
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .styled-button {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  /* Add additional styling for the button if needed */
+  background: rgba(73, 234, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 20px;
+  flex-basis: calc(50% - 5px);
 }
 
+.styled-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#flag-container {
+  margin: 20px;
+}
+
+#result,
+.styled-table,
+.modal-content {
+  padding: 20px;
+}
+
+#options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.main-button {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  body {
+    height: 90vh;
+  }
+  #quiz-container {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .modal-content {
+    width: 50%; /* Adjust modal width for smaller screens */
+  }
+}
