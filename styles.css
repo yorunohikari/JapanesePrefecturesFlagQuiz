@@ -1,6 +1,6 @@
 /* Global Styles */
 body {
-  background-image: url("background.jpg");
+  background-color: rgb(249, 255, 255);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,7 +16,6 @@ body {
 #quiz-container {
   text-align: center;
   background: rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -45,17 +44,17 @@ body {
 .modal {
   display: none;
   position: fixed;
-  z-index: 1;
-  top: 0;
+  z-index: 0;
+  top: -1;
   width: 100%;
   height: 100vh;
 }
 
 .modal-content {
   background-color: #ffffff;
-  margin: 15% auto;
+  margin: 2% auto;
   width: 80%; /* Adjust modal width for smaller screens */
-  max-width: 600px; /* Limit maximum width */
+  max-width: 800px; /* Limit maximum width */
   text-align: left;
 }
 
@@ -83,11 +82,10 @@ body {
 }
 
 .styled-button {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(226, 251, 255, 0.2);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   padding: 10px;
   margin-top: 10px;
@@ -120,6 +118,50 @@ body {
   gap: 10px;
 }
 
+.slidecontainer {
+  padding-top: 15px;
+  width: 70%; /* Width of the outside container */
+  margin: 0 auto;
+}
+
+/* The slider itself */
+.slider {
+  border-radius: 16px;
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 10px; /* Specified height */
+  background: #203230; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #1482ff; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 16px;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #1482ff; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 16px;
+}
+
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
   body {
@@ -132,6 +174,7 @@ body {
 
 @media screen and (max-width: 480px) {
   .modal-content {
-    width: 50%; /* Adjust modal width for smaller screens */
+    width: 80%; /* Adjust modal width for smaller screens */
+    margin: 15% auto;
   }
 }

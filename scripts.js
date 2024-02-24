@@ -71,11 +71,12 @@ function endQuiz() {
     // Display results
     const resultContainer = document.getElementById('result-container');
     resultContainer.innerHTML = `
-        <h1>Quiz Results</h1>
-        <p>Number of correct answers: ${numCorrectAnswers}</p>
-        <p>Number of wrong answers: ${numWrongAnswers}</p>
-        ${wrongAnswers.length > 0 ? '<div id="wrong-answers"></div>' : ''}
-        <button id="play-again-btn">Play Again</button>
+    <h1>クイズ結果</h1>
+    <p>正解数：${numCorrectAnswers}</p>
+    <p>不正解数：${numWrongAnswers}</p>
+    ${wrongAnswers.length > 0 ? '<div id="wrong-answers"></div>' : ''}
+    <button id="play-again-btn">もう一度プレイ</button>
+
     `;
 
     // Display wrong answers if there are any
@@ -94,13 +95,13 @@ function endQuiz() {
 // Function to display wrong answers
 function displayWrongAnswers() {
     const wrongAnswersContainer = document.getElementById('wrong-answers');
-    wrongAnswersContainer.innerHTML = '<h2>Wrong Answers</h2>';
+    wrongAnswersContainer.innerHTML = '<h2>不正解の回答</h2>';
 
     // Create table
     const table = document.createElement('table');
     table.classList.add('styled-table'); // Add CSS class to the table
     const headerRow = table.insertRow();
-    headerRow.innerHTML = '<th>Prefecture</th><th>Flag</th>';
+    headerRow.innerHTML = '<th>都道府県</th><th>旗</th>';
 
     // Populate table with wrong answers
     wrongAnswers.forEach(answer => {
@@ -257,4 +258,13 @@ function resetQuiz() {
     document.getElementById('flag-container').innerHTML = '';
     document.getElementById('options').innerHTML = '';
     document.getElementById('result').textContent = '';
+}
+
+var slider = document.getElementById("prefecture-count");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function () {
+    output.innerHTML = this.value;
 }
