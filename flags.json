@@ -60,6 +60,10 @@
         "flag": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Flag_of_Ishikawa_Prefecture.svg"
     },
     {
+        "prefecture": "岩手県",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_Iwate_Prefecture.svg"
+    },
+    {
         "prefecture": "香川県",
         "flag": "https://upload.wikimedia.org/wikipedia/commons/2/29/Flag_of_Kagawa_Prefecture.svg"
     },
@@ -110,5 +114,77 @@
     {
         "prefecture": "新潟県",
         "flag": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_Niigata_Prefecture.svg"
+    },
+    {
+        "prefecture": "大分県",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Flag_of_Oita_Prefecture.svg"
+    },
+    {
+        "prefecture": "岡山県",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/3/33/Flag_of_Okayama_Prefecture.svg"
+    },
+    {
+        "prefecture": "沖縄県",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Flag_of_Okinawa_Prefecture.svg"
+    },
+    {
+        "prefecture": "大阪府",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Flag_of_Osaka_Prefecture.svg"
+    },
+    {
+        "prefecture": "佐賀県",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/1/18/Flag_of_Saga_Prefecture.svg"
+    },
+    {
+        "prefecture": "埼玉県",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Flag_of_Saitama_Prefecture.svg"
+    },
+    {
+        "prefecture": "滋賀県",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/9/99/Flag_of_Shiga_Prefecture.svg"
+    },
+    {
+        "prefecture": "島根県",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Flag_of_Shimane_Prefecture.svg"
+    },
+    {
+        "prefecture": "静岡県",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/9/92/Flag_of_Shizuoka_Prefecture.svg"
+    },
+    {
+        "prefecture": "栃木県",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Flag_of_Tochigi_Prefecture.svg"
+    },
+    {
+        "prefecture": "徳島県",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Flag_of_Tokushima_Prefecture.svg"
+    },
+    {
+        "prefecture": "東京都",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/1/15/Flag_of_Tokyo_Metropolis.svg"
+    },
+    {
+        "prefecture": "鳥取県",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Flag_of_Tottori_Prefecture.svg"
+    },
+    {
+        "prefecture": "富山県",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Flag_of_Toyama_Prefecture.svg"
+    },
+    {
+        "prefecture": "和歌山県",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Flag_of_Wakayama_Prefecture.svg"
+    },
+    {
+        "prefecture": "山形県",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Flag_of_Yamagata_Prefecture.svg"
+    },
+    {
+        "prefecture": "山口県",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_Yamaguchi_Prefecture.svg"
+    },
+    {
+        "prefecture": "山梨県",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_Yamanashi_Prefecture.svg"
     }
 ]
